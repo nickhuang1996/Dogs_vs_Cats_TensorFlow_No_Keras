@@ -3,7 +3,7 @@ from data_iterator_init_op.data_iterator.data_iterator import get_data_iterator
 from networks.pretrained_net.pretrained_models import inference
 from loss import get_loss
 from optimizer.get_apply_grad_op import get_apply_grad_op_group
-from parser_setting import args
+
 
 import tensorflow as tf
 from tensorflow.contrib import slim
@@ -173,9 +173,6 @@ class Trainer(object):
         return precision
 
 
-if __name__ == '__main__':
-    # train(args=args)
-    trainer = Trainer(args=args)
-    trainer.train()
+
 
 
